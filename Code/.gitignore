@@ -1,4 +1,5 @@
 MFCC/*.npy
+MFCC/*.zip
 Models
 Results
 Test_Models
