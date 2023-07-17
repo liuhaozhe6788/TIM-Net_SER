@@ -209,6 +209,7 @@ class TIMNET_Model(Common_Model):
     
     def infer(self, x, model_dir):
         batch_size, feat_dim=x.shape[0],x.shape[2]
+        self.create_model()
         x_feats=np.zeros(shape=(10,batch_size,feat_dim))
         # y_preds =np.zeros(shape=(10,batch_size,4))
         weight_path=os.path.join(model_dir, "weights_best.hdf5")

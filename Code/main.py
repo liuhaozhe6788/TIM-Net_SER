@@ -65,6 +65,7 @@ CLASS_LABELS_dict = {"CASIA": CASIA_CLASS_LABELS,
                "RAVDE": RAVDE_CLASS_LABELS,
                "SAVEE": SAVEE_CLASS_LABELS,
                "ESD_train": ESD_CLASS_LABELS,
+               "ESD_test": ESD_CLASS_LABELS,
                "INTERSECT":INTERSECT_CLASS_LABELS}
 data = np.load("./MFCC/"+args.data+".npy",allow_pickle=True).item()
 x_source = data["x"]
@@ -76,3 +77,4 @@ if args.mode=="train":
     model.train(x_source, y_source)
 elif args.mode=="test":
     x_feats = model.infer(x_source, model_dir=args.test_path)
+    print(x_feats)

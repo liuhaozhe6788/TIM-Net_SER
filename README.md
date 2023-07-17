@@ -1,6 +1,6 @@
 # TIM-Net
 
-Tensorflow implementation of ICASSP 2023 paper, "Temporal Modeling Matters: A Novel Temporal Emotional Modeling Approach for Speech Emotion Recognition". [[paper]](https://arxiv.org/abs/2211.08233) [[code]](https://github.com/Jiaxin-Ye/TIM-Net_SER) 
+Tensorflow implementation of ICASSP 2023 paper, "Temporal Modeling Matters: A Novel Temporal Emotional Modeling Approach for Speech Emotion Recognition". [[paper]](https://arxiv.org/abs/2211.08233) based on [[code]](https://github.com/Jiaxin-Ye/TIM-Net_SER) 
 
 ### Introduction 
 
@@ -8,23 +8,20 @@ Tensorflow implementation of ICASSP 2023 paper, "Temporal Modeling Matters: A No
 
 ## Usage:
 
-> **Our MFCC features files (*.npy)**: 
+> **Our MFCC features file (*.npy)**: 
 > 
-> `Baidu links`: https://pan.baidu.com/s/1Y-GDJXpF0FqjcGGN6y84JA?pwd=MFCC `code`: MFCC 
-> 
-> `Google links`: https://drive.google.com/drive/folders/1nl7hej--Nds2m3MrMDHT63fNL-yRRe3d
+> `Google links`: https://drive.google.com/drive/folders/1dt5iGKrLnhwkqhIltHR-qtksMFXhFkXp
 > 
 >
->**Our testing model weight files (*.hdf5)**: 
+>**Our testing model weight file (*.hdf5)**: 
 > 
-> `Baidu links`:  https://pan.baidu.com/s/1EtjhuljeHwvIjYG8hYtMXQ?pwd=HDF5 `code`: HDF5
 > 
-> `Google links`: https://drive.google.com/drive/folders/1ZjgcT6R0A0C2twXatgpimFh1a3IL81pw
+> `Google links`: https://drive.google.com/drive/folders/11DFU_JBGet_HEwUoPZGDfe-fDZ42eqiG
 
 ### 1. Clone Repository
 
 ```bash
-$ git clone https://github.com/Jiaxin-Ye/TIM-Net_SER.git
+$ git clone https://github.com/liuhaozhe6788/TIM-Net_SER.git
 $ cd TIM-Net_SER/Code
 ```
 
@@ -55,9 +52,9 @@ In the experiments, the 39-D static MFCCs are extracted using the Librosa toolbo
 
 > The "mean_signal_length" is set to 100000 for all datasets.
 
-You can download the MFCCs of the first six datasets from [link](https://pan.baidu.com/s/1Y-GDJXpF0FqjcGGN6y84JA?pwd=MFCC ) to `MFCC` folder. The downloaded data does not contain the ESD dataset. 
+You can download the MFCCs of the first six datasets from [link](https://drive.google.com/drive/folders/1nl7hej--Nds2m3MrMDHT63fNL-yRRe3d ) to `MFCC` folder. The downloaded data does not contain the ESD dataset. 
 
-Then, you need to download the ESD dataset from [this](https://github.com/HLTSingapore/Emotional-Speech-Data) and extract as `data/Emotional_Speech_Dataset``. Then run python scripts:
+Then, you need to download the ESD dataset from [this](https://github.com/HLTSingapore/Emotional-Speech-Data) and extract as `data/Emotional_Speech_Dataset`. Then run python scripts:
 
 ```bash
 $ python esd_2_npy.py
@@ -66,7 +63,7 @@ $ python mix_data.py
 
 ```
 
-After that, you will get the INTERSECT.npy data file. 
+After that, you will get the `INTERSECT.npy` data file in `MFCC` folder. 
 
 ```python
 def get_feature(file_path: str, mfcc_len: int = 39, mean_signal_length: int = 100000):
@@ -93,6 +90,8 @@ def get_feature(file_path: str, mfcc_len: int = 39, mean_signal_length: int = 10
     return feature
 ```
 
+Alternatively, you can download the `INTERSECT.npy` data file from [link](https://drive.google.com/drive/folders/1dt5iGKrLnhwkqhIltHR-qtksMFXhFkXp) and extract it to `MFCC` folder.
+
 ### 5. Training and Testing
 
 #### Training
@@ -107,10 +106,10 @@ $ python main.py --mode train --data INTERSECT --split_fold 10 --random_seed 46 
  run following commands:
 
 ```bash
-$ python main.py --mode test --data INTERSECT --split_fold 10 --random_seed 46 --epoch 1_000_000 --gpu 0 --bidirection --batch_size 512  
+$ python main.py --mode test --data ESD_test --split_fold 10 --random_seed 46 --epoch 1_000_000 --gpu 0 --bidirection --batch_size 10 
 ```
 run the tensorboard to monitor the training loss and validation loss.
 
-You can download our model files from our shared [link]( https://pan.baidu.com/s/1EtjhuljeHwvIjYG8hYtMXQ?pwd=HDF5) to `Test_Models` folder. 
+You can download our model files from our shared [link]( https://drive.google.com/drive/folders/11DFU_JBGet_HEwUoPZGDfe-fDZ42eqiG) to `Test_Models` folder. 
 
 
