@@ -1,0 +1,7 @@
+MFCC/*.npy
+Models
+Results
+Test_Models
+__pycache__
+/.vscode
+log
