@@ -55,9 +55,9 @@ In the experiments, the 39-D static MFCCs are extracted using the Librosa toolbo
 
 > The "mean_signal_length" is set to 100000 for all datasets.
 
-If you are not convenient  to preprocess these features, you can download them from our shared [link](https://pan.baidu.com/s/1Y-GDJXpF0FqjcGGN6y84JA?pwd=MFCC ) to `MFCC` folder. The downloaded data does not contain the ESD dataset. 
+You can download the MFCCs of the first six datasets from [link](https://pan.baidu.com/s/1Y-GDJXpF0FqjcGGN6y84JA?pwd=MFCC ) to `MFCC` folder. The downloaded data does not contain the ESD dataset. 
 
-You need to download the ESD dataset from [this](https://github.com/HLTSingapore/Emotional-Speech-Data) and extract as data/Emotional_Speech_Dataset. Then run python scripts:
+Then, you need to download the ESD dataset from [this](https://github.com/HLTSingapore/Emotional-Speech-Data) and extract as data/Emotional_Speech_Dataset. Then run python scripts:
 
 ```bash
 $ python esd_2_npy.py
