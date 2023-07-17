@@ -57,7 +57,7 @@ In the experiments, the 39-D static MFCCs are extracted using the Librosa toolbo
 
 You can download the MFCCs of the first six datasets from [link](https://pan.baidu.com/s/1Y-GDJXpF0FqjcGGN6y84JA?pwd=MFCC ) to `MFCC` folder. The downloaded data does not contain the ESD dataset. 
 
-Then, you need to download the ESD dataset from [this](https://github.com/HLTSingapore/Emotional-Speech-Data) and extract as data/Emotional_Speech_Dataset. Then run python scripts:
+Then, you need to download the ESD dataset from [this](https://github.com/HLTSingapore/Emotional-Speech-Data) and extract as `data/Emotional_Speech_Dataset``. Then run python scripts:
 
 ```bash
 $ python esd_2_npy.py
