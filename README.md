@@ -16,7 +16,7 @@ Tensorflow implementation of ICASSP 2023 paper, "Temporal Modeling Matters: A No
 >**Our testing model weight file (*.hdf5)**: 
 > 
 > 
-> `Google links`: https://drive.google.com/drive/folders/11DFU_JBGet_HEwUoPZGDfe-fDZ42eqiG
+> `Google links`: https://drive.google.com/drive/folders/1S0L6NqhdJcOGNFtbfFvyJMUJy7y5mRdh
 
 ### 1. Clone Repository
 
@@ -110,6 +110,6 @@ $ python main.py --mode test --data ESD_test --split_fold 10 --random_seed 46 --
 ```
 run the tensorboard to monitor the training loss and validation loss.
 
-You can download our model files from our shared [link]( https://drive.google.com/drive/folders/11DFU_JBGet_HEwUoPZGDfe-fDZ42eqiG) to `Test_Models` folder. 
+You can download our model files from our shared [link](https://drive.google.com/drive/folders/1S0L6NqhdJcOGNFtbfFvyJMUJy7y5mRdh) to `Test_Models` folder. 
 
 
